@@ -1,0 +1,28 @@
+#! /bin/bash
+
+
+if [ "$#" != "1" ]
+then
+    echo "Zla liczba parametrow"
+    exit 1
+fi
+
+if [ ! -d "$1" ]
+then
+	echo "Nie jest katalogiem"
+	exit 1
+fi
+
+directory="$1"
+
+let count=0
+
+for file in $(ls -S $directory)
+do
+	if [ -x $directory/$file ]
+	then
+		mv $directory/$file $directory/$file.$count
+		let count=count+1
+	fi
+done
+

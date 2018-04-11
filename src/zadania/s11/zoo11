@@ -1,0 +1,38 @@
+#! /bin/bash
+
+# Należy wygenerować listę plików brakujących w katalogu
+
+if [ "$#" != "2" ]
+then
+    echo "Zla liczba parametrow"
+    exit 1
+fi
+
+if [ ! -d "$1" ]
+then
+	echo "Nie jest katalogiem"
+	exit 1
+fi
+
+if [ ! -f "$2" ]
+then
+	echo "Nie jest plikiem"
+	exit 1
+fi
+
+filename="$2"
+DIR="$1"
+
+while read -r line
+do
+	if [ ! -e $DIR/$line ]
+	then
+     	echo $line
+	fi
+done < "$filename"
+
+
+
+
+
+
