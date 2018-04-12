@@ -10,7 +10,7 @@ do
   
   random=$[ ( $RANDOM % 2 ) ]  
 
-  if [ $random = 1 ]  #spacje przy = konieczne!
+  if [ $random = 1 ]  #spaces next to = are required!
   then
     chmod +x $DIRECTORY/$i
   fi

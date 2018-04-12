@@ -8,14 +8,9 @@ do
   touch $DIRECTORY/${i}
   
   random=$[ ( $RANDOM % 2 ) ]  
-  #echo $random
 
-  if [ $random = 1 ]  #spacje przy = konieczne!
+  if [ $random = 1 ]
   then
     chmod +x $DIRECTORY/$i
-    #echo $i
   fi
 done
-
-#executable_files=$(( ( RANDOM % $NUMBER_OF_FILES )  + 1 ))  #generates random number
-

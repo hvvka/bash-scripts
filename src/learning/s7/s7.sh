@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Przesuwanie wszystkich plików z ustawionym prawem wykonywania z jednego katalogu do drugiego. Pozostałe pliki w katalogu nie powinny być ruszane. Nazwy katalogów, źródłowego i docelowego, zadawane jako parametry skryptu.
+
 if [ "$#" != "2" ]
 then
   echo "Wrong number of parameters"
@@ -22,8 +24,3 @@ do
     mv $file $CAT2/
   fi
 done
-
-
-
-#Przesuwanie wszystkich plików z ustawionym prawem wykonywania z jednego katalogu do drugiego. Pozostałe pliki w katalogu nie powinny być ruszane. Nazwy katalogów, źródłowego i docelowego, zadawane jako parametry skryptu.
-
